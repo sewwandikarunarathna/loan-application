@@ -8,7 +8,8 @@ var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.signup = (req,res)=> {
-    //create new user in database
+    
+  //create new user in database
     const user = new User({
         name: req.body.name,
         email: req.body.email,
@@ -45,7 +46,7 @@ exports.signup = (req,res)=> {
             }
         );
         } else {
-            Role.findOne({ username: "user" }, (err, role) => {
+            Role.findOne({ username: "customer" }, (err, role) => {
                 if (err) {
                 res.status(500).send({ message: err });
                 return;

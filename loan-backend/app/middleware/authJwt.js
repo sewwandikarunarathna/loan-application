@@ -20,7 +20,7 @@ verifyToken = (req, res, next) => {
       req.userId = decoded.id;
       next();
     });
-  };
+};
 
 //check if roles of the user contains required role or not
 isAdmin = (req, res, next) => {
