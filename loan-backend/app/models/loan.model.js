@@ -18,6 +18,6 @@ module.exports = mongoose => {
     return object;
   });
 
-  const Loan = mongoose.model("loan", schema);
+  const Loan = mongoose.model("Loan", schema);
     return Loan;
 };

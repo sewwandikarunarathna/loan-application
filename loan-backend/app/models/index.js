@@ -11,6 +11,7 @@ db.role = require("./role.model");
 db.ROLES = ["customer", "admin", "user"];
 
 db.loans = require("./loan.model.js")(mongoose);
-db.requestLoans = require("./requestLoan.model.js")(mongoose);
+db.loanRequests = require("./loanRequest.model.js")(mongoose);
+db.approvedRequests = require("./approvedRequest.model.js")(mongoose);
 
 module.exports = db;

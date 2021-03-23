@@ -2,7 +2,6 @@
 //authorization part 
 const {authJwt} = require("../middleware");
 const controller = require("../controllers/user.controller");
-const requestloancontroller = require("../controllers/requestLoan.controller");
 const { connect } = require("mongoose");
 
 module.exports = function(app){
@@ -26,7 +25,6 @@ module.exports = function(app){
     //for admins
     app.get("/api/test/admin", [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard);
 
-    //for requesting loan in customer side
-    app.post("/api/requestloan", requestloancontroller.createRequestLoan);
+    
 
 };
